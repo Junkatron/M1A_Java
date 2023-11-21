@@ -9,7 +9,7 @@ public class Program3 {
 		int pounds = getInt("Enter your weight in pounds: ");
 		convertInputToStonesPounds(pounds);
 		int kilograms = getInt("\nEnter your weight in kilograms: ");
-		convertKgsToStonesPounds(pounds);
+		convertKgsToStonesPounds(kilograms);
 	}
 	
 	static void convertInputToStonesPounds(int pounds) {
