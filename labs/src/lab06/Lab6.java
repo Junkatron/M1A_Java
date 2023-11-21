@@ -7,6 +7,10 @@ public class Lab6 {
 		grades();
 	}
 
+	public void part2() {
+		account();
+	}
+	
 	public void grades() {
 		int numStudents = 5;
 		String[] names = new String[numStudents];
@@ -53,7 +57,23 @@ public class Lab6 {
 			}
 		}
 	}
-	
+
+	private void account() {
+		// TODO Auto-generated method stub
+		float initalAmount = 100;
+		float targetAmount = 200;
+		float interestRate = 0.05f;
+		float currentAmount = initalAmount;
+		int year = 1;
+		
+		while (currentAmount < targetAmount) {
+			currentAmount = currentAmount + (currentAmount * interestRate);
+			System.out.printf("Year %d: £%f\n", year, currentAmount);
+			year++;
+		}
+		
+	}
+
 	// Copied this from the interweb
 	public Integer tryParseInt(String text) {
 		try {
