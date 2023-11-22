@@ -4,6 +4,7 @@ public class Token {
 	private int x;
 	private int y;
 	private Map map;
+	private static int maxSpeed = 65;
 	public int getX() {
 		return x;
 	}
@@ -49,6 +50,11 @@ public class Token {
 	}
 	
 	boolean move(String direction, int distance) {
+		if (distance > maxSpeed) {
+			System.out.println("Please check data");
+			return true; // True so we don't delete the Token
+		}
+
 		boolean isValidMove = false;
 		String invalidMoveText = "The token has fallen off the map";
 

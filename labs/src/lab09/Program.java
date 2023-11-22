@@ -3,7 +3,7 @@ package lab09;
 public class Program {
 
 	public static void main(String[] args) {
-		// Lab 9 part 1
+		// Lab 9 part 1 and part 2
 		Map map = new Map(500, 400);
 		Token t1 = new Token(70, 30, map);
 		Token t2 = new Token(10, 20, map);
@@ -11,19 +11,20 @@ public class Program {
 		
 		displayCoord(t1, t2, t3);
 		
-		System.out.println("Move t1 east by 100");
-		t1.move("east", 100);
+		System.out.println("Move t1 east by 10");
+		t1.move("east", 10);
 		displayCoord(t1, t2, t3);
 
 		System.out.println("Move t1 west by 50");
 		t1.move("WEST", 50);
 		displayCoord(t1, t2, t3);
 		
-		System.out.println("Move t1 west by 500");
-		if (!t1.move("W", 500))
+		System.out.println("Move t1 west by 65");
+		if (!t1.move("W", 65))
 			t1 = null;
 		displayCoord(t1, t2, t3);
 		
+		// Test part 2
 		System.out.println("Move t2 east(90) by 100");
 		if (!t2.move(90, 100))
 			t2 = null;
