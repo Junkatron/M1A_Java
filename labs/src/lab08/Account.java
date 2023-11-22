@@ -47,4 +47,9 @@ public class Account {
 		System.out.println("Owner: "+getOwner());
 		System.out.println("Balance: "+getBalance());
 	}
+	
+	public void addInterest() {
+		double interestRate = 0.025; // 2.5%
+		balance = balance + (balance * interestRate);
+	}
 }
