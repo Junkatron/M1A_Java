@@ -1,6 +1,29 @@
 package lab07;
 
 public class Lab7 {
+	
+	public int[] sort(int[] numbers) {
+		// This is probably a naff way to do it 
+		boolean working = true;
+		int[] list = numbers;
+		while(working) {
+			boolean changed = false;
+			for (int i = 0; i < list.length; i++) {
+				if(i == 0) continue;
+				if(list[i] > list[i-1]) {
+					int tmp = list[i];
+					list[i] = list[i-1];
+					list[i-1] = tmp;
+					changed = true;
+				}
+			}
+			if(!changed) {
+				working = false;
+			}
+		}
+		return list;
+	}
+	
 	public void start() {
 		int[] numbers = { 1, 3, -5, 7, 0, 4, 6, 8 };
 		int sum = Sum(numbers);
