@@ -74,6 +74,18 @@ public class Lab6 {
 		
 	}
 
+	public void multiplicationTable() {
+		int[] col = {1,2,3,4,5,6,7,8,9,10};
+		int[] row = {1,2,3,4,5,6,7,8,9,10};
+		
+		for (int i = 0; i < col.length; i++) {
+			for (int j = 0; j < row.length; j++) {
+				System.out.printf("%5d", col[i] * row[j]);
+			}
+			System.out.println();
+		}
+	}
+	
 	// Copied this from the interweb
 	public Integer tryParseInt(String text) {
 		try {
