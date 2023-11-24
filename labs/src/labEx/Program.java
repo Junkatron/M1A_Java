@@ -9,7 +9,7 @@ public class Program {
 			acc1.getDetails();
 			acc1.withdraw(60);
 			acc1.getDetails();
-		} catch (Exception e) {
+		} catch (IllegalArgumentException e) {
 			System.out.println("Withdrawal not completed. You do not have enough money.");
 		}
 		finally {
