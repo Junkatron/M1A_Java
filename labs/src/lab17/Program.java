@@ -29,6 +29,11 @@ public class Program {
 		System.out.println("Surface s2");
 		s2.surface();
 		displaySubDetails(s1, s2);
+		
+		System.out.println("Move s2 north by 16 (speed check)");
+		if(!s2.move("N", 16))
+			s2 = null;
+		displaySubDetails(s1, s2);
 
 		displayPlaneDetails(p1, p2);
 		
@@ -50,8 +55,8 @@ public class Program {
 		p2.land();
 		displayPlaneDetails(p1, p2);
 		
-		System.out.println("Move p1 north by 370 (speed check)");
-		if(!p2.move("S", 370))
+		System.out.println("Move p2 north by 370 (speed check)");
+		if(!p2.move("N", 370))
 			p2 = null;
 		displayPlaneDetails(p1, p2);
 		
@@ -66,7 +71,7 @@ public class Program {
 		System.out.println();
 	}
 	private static void displayPlaneDetails(Plane p1, Plane p2) {
-		String tokenDetailsText = "Plane %s is at: x=%d, y=%d, depth=%d\n";
+		String tokenDetailsText = "Plane %s is at: x=%d, y=%d, height=%d\n";
 		if (p1 != null)
 			System.out.printf(tokenDetailsText, "plane1", p1.getX(), p1.getY(), p1.getHeight());
 		if (p2 != null)

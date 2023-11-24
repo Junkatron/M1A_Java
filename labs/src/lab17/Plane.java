@@ -5,10 +5,12 @@ public class Plane extends Token {
 	private static int maxSpeed = 360;
 	private int height = 0;
 	
+	private Plane(int x, int y, Map map, int maxSpeed) {
+		super(x, y, map, maxSpeed);
+	}
+	
 	public Plane(int x, int y, Map map) {
-		super(x, y, map);
-		super.setMaxSpeed(maxSpeed);
-		// TODO Auto-generated constructor stub
+		this(x, y, map, maxSpeed);
 	}
 
 	public int getHeight() {

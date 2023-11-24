@@ -5,10 +5,12 @@ public class Submarine extends Token {
 	private static int maxSpeed = 15;
 	private int depth = 0;
 	
+	private Submarine(int x, int y, Map map, int maxSpeed) {
+		super(x, y, map, maxSpeed);
+	}
+	
 	public Submarine(int x, int y, Map map) {
-		super(x, y, map);
-		super.setMaxSpeed(maxSpeed);
-		// TODO Auto-generated constructor stub
+		this(x, y, map, maxSpeed);
 	}
 
 	public int getDepth() {

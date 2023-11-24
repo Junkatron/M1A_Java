@@ -4,13 +4,8 @@ public class Token {
 	private int x;
 	private int y;
 	private Map map;
-	private static int maxSpeed = 65;
-	public static int getMaxSpeed() {
-		return maxSpeed;
-	}
-	public static void setMaxSpeed(int maxSpeed) {
-		Token.maxSpeed = maxSpeed;
-	}
+	private int maxSpeed = 65;
+
 	public int getX() {
 		return x;
 	}
@@ -23,6 +18,12 @@ public class Token {
 	public void setY(int y) {
 		this.y = y;
 	}
+	public int getMaxSpeed() {
+		return maxSpeed;
+	}
+	public void setMaxSpeed(int maxSpeed) {
+		this.maxSpeed = maxSpeed;
+	}
 	public Map getMap() {
 		return map;
 	}
@@ -30,10 +31,11 @@ public class Token {
 		this.map = map;
 	}
 	
-	public Token(int x, int y, Map map) {
+	public Token(int x, int y, Map map, int maxSpeed) {
 		this.x = x;
 		this.y = y;
 		this.setMap(map);
+		this.setMaxSpeed(maxSpeed);
 	}
 	
 	boolean move(int directionInt, int distance) {
@@ -57,12 +59,12 @@ public class Token {
 	
 	boolean move(String direction, int distance) {
 		if (distance > maxSpeed) {
-			System.out.println("Please check data");
+			System.out.println(" * Please check data *");
 			return true; // True so we don't delete the Token
 		}
 
 		boolean isValidMove = false;
-		String invalidMoveText = "The token has fallen off the map";
+		String invalidMoveText = " * The token has fallen off the map *";
 
 		switch(direction.toLowerCase()) {
 			case "north": case "n":
